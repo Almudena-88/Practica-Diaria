@@ -90,34 +90,33 @@
      git rebase master
 
   ### PR Simulada
-    git log master..rama - Para enseñar comandos que están en "rama" y no en el master
-    git diff master..rama - Enseña las diferencias entre las ramas
+     git log master..rama - Para enseñar comandos que están en "rama" y no en el master
+     git diff master..rama - Enseña las diferencias entre las ramas
 
-  ### PR Con Commits
-  git init
-  touch archivo1.py
-  git add archivo1.py
-  git commit -m "Primer mensaje"
-  git add archivo1.py
-  git commit -m "Segundo mensaje"
-  git add archivo1.py
-  git commit -m "Tercer mensaje"
+   ### PR Con Commits
+     git init
+     touch archivo1.py
+     git add archivo1.py
+     git commit -m "Primer mensaje"
+     git add archivo1.py
+     git commit -m "Segundo mensaje"
+     git add archivo1.py
+     git commit -m "Tercer mensaje"
 
-  ### PR Squash
+   ### PR Squash
+     git switch -c segunda 
+     touch archivo2.py
+     git add archivo2.py 
+     git commit -m "Otro mensaje"
+     git add archivo2.py
+     git commit -m "Se añade otro mensaje" 
+     git add archivo2.py
+     git commit -m "Se añade el último mensaje"
+     git switch master
+     git merge --squash segunda
+     git commit
 
-  git switch -c segunda 
-  touch archivo2.py
-  git add archivo2.py 
-  git commit -m "Otro mensaje"
-  git add archivo2.py
-  git commit -m "Se añade otro mensaje" 
-  git add archivo2.py
-  git commit -m "Se añade el último mensaje"
-  git switch master
-  git merge --squash segunda
-  git commit
-
-  *Añadida esta práctica al repositorio "PR-Squash y Commits"
+    *Añadida esta práctica al repositorio "PR-Squash y Commits"
 
 
    
