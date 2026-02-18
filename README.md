@@ -130,5 +130,47 @@
  ### Debug
   Python Debugger
 
- 
+ ## Mapa técnico del stack 
+
+  ### Runtime
+  Entorno donde se ejecuta código. Es el software que necesita el código para poder ser ejecutado.
+
+  - Proporciona soporte al programa
+  - Gestiona la memoria, hilos y componentes
+  - Ejecuta código
+
+  ### Framework 
+  Conjunto estandar de conceptos, prácticas y herramientas predefinidas que actúan como plantilla que estructura el proyecto como un marco de trabajo.
+
+  - Define cómo organizar el código y los archivos
+  - Incluye librerías y componentes reutilizables 
+
+  ### Base de datos
+  Conjunto de datos estructurados, almacendos en un sistema informático que permite recopilar, gestionar, consultar y actualizar datos de forma rápida, segura y eficiente.
+
+  - Persistencia de datos
+  - Integridad de los datos 
+  - Consultas complejas 
+
+  ### Mensajería
+  Mecanismo de comunicación asíncrona para intercambiar información sin estar conectados en tiempo real 
+  
+  - Paso de mensajes 
+  - La aplicacón puede seguir funcionado incluso si el receptor no está listo, ya que los mensajes se  
+   almacenan en colas de espera
+
+  ### Front-End
+  Es la parte de la web o aplicación con la que el usuario interactúa directamente. 
+
+  - Se encarga de la parte que responde a las acciones del usuario, incluyendo: diseño, estructura, textos, imágenes, colores, botones y menús de navegación 
+  - Garantiza que la navegación sea intuitiva y funcional
+
+  ### Flujo de entrega
+
+  1. El usuario hace click en el front-end
+  2. Front-end hace una petición HTTP al backend
+  3. Front-end procesa la petición 
+  4. Backend hace una consulta a la BD
+  5. Se devuelve la respuesta en formato JSON
+  6. Front-end renderiza los datos
 
