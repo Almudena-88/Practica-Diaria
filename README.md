@@ -38,13 +38,13 @@
 ### Comandos de uso diario:
 
 #### Levantar contenedores:
-    docker-compose up
+    docker compose up
 
    #### Levantar contenedores en segundo plano
-    docker-compose up -d
+    docker compose up -d
 
    #### Detener y eliminar los contenedores    
-    docker-compose down
+    docker compose down
 
    #### Construir imágenes
     docker compose build 
@@ -129,4 +129,6 @@
 
  ### Debug
   Python Debugger
+
+ 
 
