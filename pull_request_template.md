@@ -4,12 +4,11 @@
 Breve descripción sobre el cambio
 
 ## Checklist 
-
-· El código pasa lint [ ]
-· El código pasa los test correctamente [ ]
-· El build es exitoso [ ]
-· Se ha hecho evaluación de riesgos [ ]
-· Hay opción de hacer rollback [ ]
+  · [ ] El código pasa lint   
+  · [ ] El código pasa los test correctamente   
+  · [ ] El build es exitoso   
+  · [ ] Se ha hecho evaluación de riesgos   
+  · [ ] Hay opción de hacer rollback 
 
 ## Riesgos identificados
 Identificación de los posibles efectos
