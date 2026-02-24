@@ -37,7 +37,22 @@
 
 ### Comandos de uso diario:
 
-#### Levantar contenedores:
+#### Consultar imágenes descargadas:
+    docker images
+
+#### Descargar imágenes:
+    docker pull nombre_imagen
+
+#### Descargar versión específica de la imagen (**Docker Hub Container Image Library**):
+    docker pull nombre_imagen:versión_imagen
+
+#### Eliminar imágenes:
+    docker image rm nombre_imagen
+
+#### Crear un contenedor en base a la iamgen:
+    docker create nombre_imagen     
+
+#### Levantar contenedores definidos en **docker-compose-yml** y vincularlos automáticamente a una red:
     docker compose up
 
    #### Levantar contenedores en segundo plano
@@ -57,10 +72,11 @@
  ## ·Git
  
    ### Definir nombre de usuario y correo 
-     git config --global user.name "Nombre" y git config --global user.email "correo.com"
+     git config --global user.name "Nombre" 
+     git config --global user.email "nombre@correo.com"
  
    ### Inicializar el repositorio desde la carpeta del proyecto en el Editor
-     git innit
+     git init
 
    ### Trabajar sobre la rama principal, añadiendo archivos y almacenar los cambios temporalmente (stage) y guardarlos
      git add nombre_archivo
@@ -73,7 +89,8 @@
      git merge nombre-rama
 
    ### Crear nuevas ramas sobre las que trabajar paralelamente de forma temporal antes de fusionarla a la principal
-     feature branch: git switch -c segunda-rama 
+     feature branch: 
+     git switch -c segunda-rama 
      touch archivo.py
 
    ###  Mover commits de una rama a la principal cuando se quiere mantener el historial limpio y lineal de commits
