@@ -214,15 +214,19 @@
   4· A continuación de crea el archivo **db.js** donde se  importa la biblioteca Knex, el fichero de configuración **knexfile.js** y se escoge el entorno de configuración para después inicializar **Knex** con dicha configuración.
   Este fichero se puede exportar luego al resto de Scripts  
 
-  ### Comandos Knex:
+  ### Comandos migraciones en Knex:
 
-  Para crear un nuevo archivo de migración:
+  Para crear un nuevo archivo en el directorio migrations:
      
      pnx knex migrate:make nombreMigración
 
-  Para ejecutar migraciones:
+  Para ejecutar todas las migraciones:
 
      npx knex migrate:latest
+
+  Para ejecutar una migración en concreto:
+
+     npx knex migrate:up nombreArchivo.js  
 
   Para revertir migraciones (**rollback**) :  
 
@@ -234,7 +238,21 @@
 
   Para listar qué migraciones están aplicadas y cuáles pendientes:
 
-     npx knex migrate:status     
+     npx knex migrate:status
+
+### Comandos seeds en Knex: 
+
+   Para generar un archivo en el directorio seed: 
+
+    npx knex seed:make nombreSeed
+
+  Para ejecutar los archivos seeds por orden alfabético:
+
+    npx knex seed:run  
+
+  Para ejecutar una seed específica:
+
+    npx knex seed:run --specific=nombreArchivoSeed.js 
 
 
 
