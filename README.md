@@ -55,7 +55,7 @@
 #### Levantar contenedores definidos en **docker-compose-yml** y vincularlos automáticamente a una red:
     docker compose up
 
-   #### Levantar contenedores en segundo plano
+   ##### -Levantar contenedores en segundo plano
     docker compose up -d
 
    #### Detener y eliminar los contenedores    
@@ -190,4 +190,53 @@
   4. Backend hace una consulta a la BD
   5. Se devuelve la respuesta en formato JSON
   6. Front-end renderiza los datos
+
+
+  ## ·Knex
+
+  ### Instalación Knex:
+
+  1· Con **Node.js** y **npm** instalados, a continuación se instala **Knex**:
+
+    npm install knex 
+  2· Se instala el cliente de la base de datos con la que se va a trabajar:
+
+     - Postgres: npm instal pg
+     - MySQL:    npm install mysql
+     - SQLLite3: npm instal sqlite3 
+
+  3· Se inicializa **Knex**:
+
+      npx knex init
+
+      *En este paso se crea knexfile.js donde se define la configuración de la(s) base(s) de datos*
+
+  4· A continuación de crea el archivo **db.js** donde se  importa la biblioteca Knex, el fichero de configuración **knexfile.js** y se escoge el entorno de configuración para después inicializar **Knex** con dicha configuración.
+  Este fichero se puede exportar luego al resto de Scripts  
+
+  ### Comandos Knex:
+
+  Para crear un nuevo archivo de migración:
+     
+     pnx knex migrate:make nombreMigración
+
+  Para ejecutar migraciones:
+
+     npx knex migrate:latest
+
+  Para revertir migraciones (**rollback**) :  
+
+     npx knex migrate:rollback
+
+  Para revertir una migración específica:  
+
+     npx knex migrate:down nombreArchivo.js  
+
+  Para listar qué migraciones están aplicadas y cuáles pendientes:
+
+     npx knex migrate:status     
+
+
+
+    
 
