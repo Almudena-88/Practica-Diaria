@@ -26,7 +26,7 @@
        environment:
        POSTGRES_USER: user
        POSTGRES_PASSWORD: password
-       OSTGRES_DB: practica
+       POSTGRES_DB: practica
        ports:
        - "5432:5432"
        volumes:
@@ -37,34 +37,49 @@
 
 ### Comandos de uso diario:
 
-#### Consultar imágenes descargadas:
+#### - Consultar imágenes descargadas:
     docker images
 
-#### Descargar imágenes:
+#### - Descargar imágenes:
     docker pull nombre_imagen
 
-#### Descargar versión específica de la imagen (**Docker Hub Container Image Library**):
+#### - Descargar versión específica de la imagen (**Docker Hub Container Image Library**):
     docker pull nombre_imagen:versión_imagen
 
-#### Eliminar imágenes:
+#### - Eliminar imágenes:
     docker image rm nombre_imagen
 
-#### Crear un contenedor en base a la iamgen:
-    docker create nombre_imagen     
+#### - Ejecutar un contenedor por el nombre:
+    docker start nombre_contenedor
 
-#### Levantar contenedores definidos en **docker-compose-yml** y vincularlos automáticamente a una red:
+#### - Ejecutar un contenedor por el ID (El ID lo devuelve *docker create* o *docker ps*):
+    docker start id_contenedor 
+
+#### - Crear un contenedor en base a la imagen (Crea el contenedor pero no lo arranca):
+    docker create nombre_imagen  
+
+#### - Crear un contenedor (si no se descargó la imagen, la descarga, crea un contenedor y lo inicia)  
+    docker run nombre_imagen
+
+####  - Crear un contenedor con nombre del contenedor e imagen y puertos:
+    docker run --name nombre_contenedor -p puerto_host:puerto_contenedor -d nombre_imagen
+
+#### - Contruir una imagen a partir de un archivo Dockerfile
+    docker build nombre_imagen   
+
+#### - Levantar contenedores definidos en **docker-compose-yml** y vincularlos automáticamente a una red:
     docker compose up
 
    ##### -Levantar contenedores en segundo plano
-    docker compose up -d
+    docker compose up -d (-d para ejecutar el segundo plano y que no bloquee la terminal)
 
-   #### Detener y eliminar los contenedores    
+   #### - Detener y eliminar los contenedores    
     docker compose down
 
-   #### Construir imágenes
+   #### - Construir imágenes
     docker compose build 
 
-   ### Resetear la contraseña (Portainer) 
+   #### - Resetear la contraseña (Portainer) 
     docker container stop portainer
     docker run --rm -v portainer_data:/data portainer/helper-reset-password
     docker container start portainer
@@ -85,7 +100,7 @@
    ### Crear nuevas ramas 
      git branch nombre-rama
 
-   ### Unificar el trabajo se varias ramas en la principal
+   ### Unificar el trabajo de varias ramas en la principal
      git merge nombre-rama
 
    ### Crear nuevas ramas sobre las que trabajar paralelamente de forma temporal antes de fusionarla a la principal
